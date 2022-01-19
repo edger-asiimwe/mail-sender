@@ -4,9 +4,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
 
-    def __init__(self):
-        pass
-
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     LOGIN_VIEW = 'auth.login'
 

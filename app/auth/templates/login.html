@@ -1,1 +1,12 @@
-<h1>Hello Login</h1>
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('auth.login') }}">
+    {% form.hidden_tag() %}
+    {{ form.username.label }}
+    {{ form.username() }}
+    {{ form.password.label }}
+    {{ form.password() }}
+    {{ form.submit() }}
+</form>
+{% endblock %}
